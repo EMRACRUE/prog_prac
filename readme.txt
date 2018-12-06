@@ -1,0 +1,2 @@
+view_json.html内のjson内に追記すれば行も増えます。
+checkboxを用いた検索機能はそのうちやります。

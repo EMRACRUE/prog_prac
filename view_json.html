@@ -1,0 +1,99 @@
+<html>
+  <head>
+  	<link rel="stylesheet" type="text/css" href="main.css">
+    <script>
+      window.onload = insertData;
+
+      // 表示したい json
+      var json = [
+        { name : '桜井保育園',
+          kind : '公立',
+          address : '桜井新町5-6-3',
+          capacity : '120名',
+          tell : '0438-36-4032',
+          open : '7時',
+          close : '19時',
+          ex : '産休明け有り,障害児保育,地域交流,地域子育て支援'
+        },
+        { name : '吾妻保育園',
+          kind : '公立',
+          address : '吾妻2-10-7',
+          capacity : '60名',
+          tell : '0438-22-6756',
+          open : '7時',
+          close : '19時 / 土曜:14時',
+          ex : '産休明け有り,障害児保育,地域交流,地域子育て支援'
+        }
+      ];
+
+      function insertData () {
+        var tbody = document.querySelector('table tbody');
+
+        json.forEach(function (row) {
+          var name = document.createElement('td');
+          name.innerText = row.name;
+
+          var kind = document.createElement('td');
+          kind.innerText = row.kind;
+          
+          var address = document.createElement('td');
+          address.innerText = row.address;
+          
+          var capacity = document.createElement('td');
+          capacity.innerText = row.capacity;
+          
+          var tell = document.createElement('td');
+          tell.innerText = row.tell;
+
+		  var open = document.createElement('td');
+          open.innerText = row.open;
+
+		  var close = document.createElement('td');
+          close.innerText = row.close;
+          
+		  var ex = document.createElement('td');
+          ex.innerText = row.ex;
+
+          var tr = document.createElement('tr');
+          tr.appendChild(name);
+          tr.appendChild(kind);
+          tr.appendChild(address);
+          tr.appendChild(capacity);
+          tr.appendChild(tell);
+          tr.appendChild(open);
+          tr.appendChild(close);
+          tr.appendChild(ex);
+
+          tbody.appendChild(tr);
+          
+        });
+      }
+    </script>
+  </head>
+  <body>
+  	
+	<!--
+  	<input type="checkbox" name="search" value="産休明け有り">産休明け有り
+  	<input type="checkbox" name="search" value="障害児保育">障害児保育
+  	<input type="checkbox" name="search" value="地域交流">地域交流
+  	<input type="checkbox" name="search" value="子育て支援">子育て支援
+ 	-->
+ 	
+    <table>
+      <thead>
+        <tr>
+        	<th>name</th>
+        	<th>kind</th>
+        	<th>address</th>
+        	<th>capacity</th>
+        	<th>tell</th>
+        	<th>open</th>
+        	<th>close</th>
+        	<th>ex</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </body>
+</html>
