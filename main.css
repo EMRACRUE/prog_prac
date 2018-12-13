@@ -1,11 +1,33 @@
 table {
-    border-collapse: collapse;
-}
-
-table th {
-    background: #ffd5c5;
+    border-collapse: separate;
+    border-spacing: 5px;
+    table-layout: fixed;
+    min-width: 100%;
 }
 
 table th, table td {
-    border : solid 1px black;
+    padding : 5px 10px;
+}
+
+th {
+    background-color: #3F51B5;
+    color: #fff;
+    font-weight: normal;
+    
+}
+
+tbody th {
+    width: 100px;
+    min-width: 100px;
+}
+
+td {
+    width: 130px;
+    min-width: 130px;
+    background-color: #C0C9ff;
+}
+
+.table-scroll{
+    max-width: 700px;
+    overflow-x: auto;
 }
